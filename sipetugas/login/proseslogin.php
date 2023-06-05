@@ -17,7 +17,7 @@ class Masuk{
 
 public function __construct()
 {
-   $this->koneksi = mysqli_connect('localhost','root','','pemerintahbaru');
+   $this->koneksi = mysqli_connect('localhost','root','','sipeluang');
 
    if (!$this->koneksi) {
       echo"koneksi gagal";
@@ -66,7 +66,7 @@ public function login(){
          echo "
          <script>
          alert('selamat datang $dat[username]');
-         document.location.href = '../admin/spj/index.php';
+         document.location.href = '../index.php';
          </script>";
       }else {
       echo "
@@ -117,7 +117,7 @@ public function login(){
          </script>";
       }
    }else {
-      echo"gagal melakukan login";
+      echo"gagal melakukan login".mysqli_error($this->koneksi);
    }
 
 }

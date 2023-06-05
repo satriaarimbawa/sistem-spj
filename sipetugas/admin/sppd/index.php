@@ -11,7 +11,7 @@
 <?php include "../template/navbar.php" ?>    
 <h1>surat spt</h1>
 
-    <table border="1" class="table table-bordered">
+    <table border="1" class="table tabel">
         <tr>
             <th>no</th>
             <th>id</th>
@@ -34,11 +34,10 @@
             <?php
             if ($dat['status'] == 'verify') {
             ?>
-            <td><a href="laporan_sppd.php?id=<?=$dat['idsppd']?>"><i data-feather="download"></i></a></td>
+            <td><a href="laporan_sppd.php?id=<?=$dat['idsppd']?>"><i data-feather="download"></i></a><i data-feather="clock" style="margin-left: 20px;"></i></td>
             <?php
             }else {
             ?>
-                <td><i data-feather="clock"></i></td>
                 <td><a href="laporan_sppd.php?id=<?=$dat['idsppd']?>"><i data-feather="eye"></i></a></td>
 
             <?php

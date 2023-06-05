@@ -16,7 +16,7 @@ class myClass {
 
     public function __construct()
     {
-        $this->koneksi = mysqli_connect('localhost','root','','pemerintahbaru');
+        $this->koneksi = mysqli_connect('localhost','root','','sipeluang');
 
         if (!$this->koneksi) {
             echo "koneksi gagal dijalankan";
@@ -41,7 +41,7 @@ class myClass {
         if (!$tambah) {
             die(mysqli_error($this->koneksi));
         }else {
-            header('Location: index.php');
+            header('Location: ../kwitansi/tambah.php');
         }
     }
 

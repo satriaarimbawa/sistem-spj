@@ -2,7 +2,7 @@
 <?php include "../template/navbar.php"; ?>
 
 
-    <table class="d-flex justify-content-center table table-bordered">
+    <table class=" table tabel">
         <tr>
             <th>no</th>
             <th>id</th>
@@ -19,18 +19,17 @@
             // var_dump($query);
         ?>
         <tr>
-            <th><?=$i?></th>
-            <th><?=$dat['angkatan']?></th>
-            <th><?=$dat['tglbuat']?></th>
-            <th><?=$dat['tempat']?></th>
+            <td><?=$i?></td>
+            <td><?=$dat['angkatan']?></td>
+            <td><?=$dat['tglbuat']?></td>
+            <td><?=$dat['tempat']?></td>
             <?php
             if ($dat['status'] == 'verify') {
             ?>
-            <td><a href="laporan_peserta.php?id=<?=$dat['angkatan']?>"><i data-feather="download"></i></a></td>
+            <td><a href="laporan_peserta.php?id=<?=$dat['angkatan']?>"><i data-feather="download"></i></a><i data-feather="clock" style="margin-left: 20px;"></i></td>
             <?php
             }else {
             ?>
-                <td><i data-feather="clock"></i></td>
                 <td><a href="laporan_admin.php?page=<?=$dat['angkatan']?>"><i data-feather="eye"></i></a></td>
 
             <?php

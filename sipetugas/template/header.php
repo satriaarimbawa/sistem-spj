@@ -3,13 +3,20 @@ $session_id = $_COOKIE["session_id"];
 session_id($session_id);
 session_start();
 
-if (isset($_SESSION['username'])) {
-    
+if (!isset($_SESSION['username'])== '') {
+    if (!isset($_SESSION['level']) == 'admin') {
+    echo "<script>
+    alert('karyawan');
+    document.location.href = '../admin/index.php'
+    </script>";
+    }
 }else {
-echo "<script>
+        echo "<script>
     alert('silahkan melakukan login dahulu ');
     document.location.href = '../login/index.php'
-</script>";
+    </script>";
+
+
 }
 ?>
 <!DOCTYPE html>

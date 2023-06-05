@@ -1,15 +1,14 @@
 <?php
 session_start();
 
-if (isset($_SESSION['username'])) {
-    if (!$_SESSION['level'] == 'admin') {
-        header("Location:../index.php");
+if (isset($_SESSION['username']) == '') {
+    if (!isset($_SESSION['level']) == 'admin') {
+        echo "<script>
+            alert('silahkan melakukan login dahulu ');
+            document.location.href = '../index.php'
+        </script>";
     }
 }else {
-echo "<script>
-    alert('silahkan melakukan login dahulu ');
-    document.location.href = '../../login/index.php'
-</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -44,6 +43,7 @@ echo "<script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+<link rel="stylesheet" href="../css/admin.css">
 
 	<script>
 		$(document).ready(function(){
@@ -84,7 +84,7 @@ echo "<script>
         <div class="sidebar-brand-icon rotate-n-15">
             <!-- <i class="fas fa-laugh-wink"></i> -->
         </div>
-        <div class="sidebar-brand-text mx-3">sipetugas</div>
+        <div class="sidebar-brand-text mx-3">sipeluang</div>
     </a>
 
     <!-- Divider -->
@@ -134,8 +134,6 @@ echo "<script>
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Utilities:</h6>
                 <a class="collapse-item" href="../login/register.html">registrasi</a>
-                <a class="collapse-item" href="../sppd/index.php">sppd</a>
-                <a class="collapse-item" href="../spt.php">spt</a>
                 <a class="collapse-item" href="petugas/index.php">petugas</a>
             </div>
         </div>
@@ -156,7 +154,7 @@ echo "<script>
 <div id="content-wrapper" class="d-flex flex-column">
 
     <!-- Main Content -->
-    <div id="content">
+    <div id="content" class="content">
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -211,14 +209,6 @@ echo "<script>
                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                             Profile
                         </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Settings
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Activity Log
-                        </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../logout.php" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -239,7 +229,7 @@ echo "<script>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin keluar dari sipetugas?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Yakin keluar dari sipeluang?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>

@@ -19,7 +19,7 @@ class myclass{
 
     public function __construct()
     {
-        $this->koneksi = mysqli_connect('localhost','root','','pemerintahbaru');
+        $this->koneksi = mysqli_connect('localhost','root','','sipeluang');
     }
 
     function update(){

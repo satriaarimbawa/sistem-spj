@@ -21,7 +21,7 @@
             <textarea name="tujuan" id="" cols="30" rows="10"></textarea>
 
             <label for="">nominal</label>
-            <input type="text" name="nominal" id="">
+            <input type="number" name="nominal" id="">
 
             <label for="">jumlah nominal</label>
             <input type="text" name="jumlah" id="">

@@ -34,7 +34,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-table"></i>
-            <span>Components</span>
+            <span>PERJALANAN</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -42,12 +42,32 @@
                 <a class="collapse-item" href="../daftarspj/index.php">DAFTAR SPT</a>
                 <a class="collapse-item" href="../spt/index.php">SPT</a>
                 <a class="collapse-item" href="../sppd/index.php">SPPD</a>
+                <a class="collapse-item" href="../kwitansi/index.php">KWITANSI</a>
+                <a class="collapse-item" href="../kwitansi/arsip.php">ARSIP</a>
             </div>
         </div>
     </li>
 
-    <!-- Nav Item - Utilities Collapse Menu -->
+
     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+            aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>PENGADAAN</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Custom Utilities:</h6>
+                <a class="collapse-item" href="../login/register.html">registrasi</a>
+                <a class="collapse-item" href="petugas/index.php">petugas</a>
+            </div>
+        </div>
+    </li>
+
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
@@ -63,7 +83,7 @@
                 <a class="collapse-item" href="utilities-other.html">Other</a>
             </div>
         </div>
-    </li>
+    </li> -->
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

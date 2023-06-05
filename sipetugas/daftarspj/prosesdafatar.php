@@ -28,7 +28,7 @@ function __construct() {
 $username = "localhost";
 $user = "root";
 $pass = "";
-$db = "pemerintahbaru";
+$db = "sipeluang";
 
 
 $this->koneksi = mysqli_connect($username,$user,$pass,$db);
@@ -80,8 +80,11 @@ alert('koneksi anda gagall');
     //     }else {
         //     }
         
+            // echo"<script>
+            // document.location.href = 'laporan_peserta.php'
+            // </script>";
             echo"<script>
-            document.location.href = 'laporan_peserta.php'
+            document.location.href = '../sppd/tambah.php'
             </script>";
     // }
     }

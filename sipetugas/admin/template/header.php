@@ -3,15 +3,13 @@ $session_id = $_COOKIE["session_id"];
 session_id($session_id);
 session_start();
 
-if (isset($_SESSION['username'])) {
-    if (!$_SESSION['level'] == 'admin') {
-        header("Location:../../index.php");
-    }
-}else {
-echo "<script>
-    alert('silahkan melakukan login dahulu ');
-    document.location.href = '../../login/index.php'
+if (isset($_SESSION['username']) == '') {
+    if (!isset($_SESSION['level']) == 'admin') {
+        echo "<script>
+    alert('karyawan');
+    document.location.href = '../../index.php'
 </script>";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -46,6 +44,7 @@ echo "<script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+<link rel="stylesheet" href="../../css/admin.css">
 
 	<script>
 		$(document).ready(function(){

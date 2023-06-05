@@ -12,6 +12,7 @@
     <title>SB Admin 2 - Login</title>
     
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -24,9 +25,9 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bod">
 
-    <div class="container">
+    <div class="container card-gen">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -37,11 +38,13 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login form">
+                                <img src="../img/logaden.png" alt="">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Selamat Datang</h1>
                                     </div>
                                     <form class="user" action="proseslogin.php" method="post">
                                         <div class="form-group">
@@ -60,7 +63,7 @@
                                                     Me</label>
                                             </div>
                                         </div> -->
-                                            <button type="submit" name="login" class="btn btn-primary btn-user btn-block">Login</button>
+                                            <button type="submit" name="login" class="btn btn-login btn-user btn-block">Login</button>
                                         <!-- <a href="d" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a> -->
